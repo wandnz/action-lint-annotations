@@ -15,14 +15,12 @@ runs:
   steps:
     - run: |
         if [ "${{ inputs.problem_matchers }}" = "*" ]; then
-            matchers_files="${GITHUB_ACTION_PATH}/matchers/*.json"
+            matchers="$(find "${GITHUB_ACTION_PATH}/matchers/" -name "*.json" -exec basename {} .json \;)"
         else
-            matchers_files="${{ inputs.problem_matchers }}"
+            matchers="${{ inputs.problem_matchers }}"
         fi
 
-        for file in $matchers_files; do
-            matcher="$(basename "${file}" .json)"
-
+        for matcher in ${matchers}; do
             if [ "${{ inputs.enable }}" = "true" ]; then
                 path="${GITHUB_ACTION_PATH}/matchers/${matcher}.json"
                 echo "Adding problem matcher ${path}"
