@@ -1,6 +1,6 @@
 ---
-name: Problem matchers
-description: Add or remove problem matchers
+name: Lint Annotations
+description: Add or remove problem matchers for common linters
 inputs:
   problem_matchers:
     description: Space-separated list of problem matchers to select (without .json file extension)
