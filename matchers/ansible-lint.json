@@ -1,0 +1,16 @@
+{
+    "problemMatcher": [
+        {
+            "owner": "ansible-lint",
+            "severity": "error",
+            "pattern": [
+                {
+                    "regexp": "^([^:]+):(\\d+): (.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "message": 3
+                }
+            ]
+        }
+    ]
+}

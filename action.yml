@@ -1,0 +1,35 @@
+---
+name: Problem matchers
+description: Add or remove problem matchers
+inputs:
+  problem_matchers:
+    description: Space-separated list of problem matchers to select (without .json file extension)
+    required: false
+    default: "*"
+  enable:
+    description: Whether to add or remove problem matchers
+    required: false
+    default: "true"
+runs:
+  using: composite
+  steps:
+    - run: |
+        if [ "${{ inputs.problem_matchers }}" = "*" ]; then
+            matchers_files="${GITHUB_ACTION_PATH}/matchers/*.json"
+        else
+            matchers_files="${{ inputs.problem_matchers }}"
+        fi
+
+        for file in $matchers_files; do
+            matcher="$(basename "${file}" .json)"
+
+            if [ "${{ inputs.enable }}" = "true" ]; then
+                path="${GITHUB_ACTION_PATH}/matchers/${matcher}.json"
+                echo "Adding problem matcher ${path}"
+                echo "::add-matcher::${path}"
+            else
+                echo "Removing problem matcher ${matcher}"
+                echo "::remove-matcher owner=${matcher}::"
+            fi
+        done
+      shell: bash

@@ -1,0 +1,25 @@
+{
+    "problemMatcher": [
+        {
+            "owner": "shellcheck",
+            "severity": "notice",
+            "pattern": [
+                {
+                    "regexp": "^.*In ([^\\s]+) line (\\d+):.*$",
+                    "file": 1,
+                    "line": 2
+                },
+                {
+                    "regexp": "^.+$"
+                },
+                {
+                    "regexp": "^.*(SC\\d+) \\((error|warning)?\\w*\\): ([^\\033]+).*$",
+                    "code": 1,
+                    "severity": 2,
+                    "message": 3,
+                    "loop": true
+                }
+            ]
+        }
+    ]
+}
