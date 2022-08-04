@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 if [ "${PROBLEM_MATCHERS}" = "*" ]; then
     matchers="$(find "${GITHUB_ACTION_PATH}/matchers/" -name "*.json" -exec basename {} .json \;)"
 else
