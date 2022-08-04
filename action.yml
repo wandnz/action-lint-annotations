@@ -13,21 +13,8 @@ inputs:
 runs:
   using: composite
   steps:
-    - run: |
-        if [ "${{ inputs.problem_matchers }}" = "*" ]; then
-            matchers="$(find "${GITHUB_ACTION_PATH}/matchers/" -name "*.json" -exec basename {} .json \;)"
-        else
-            matchers="${{ inputs.problem_matchers }}"
-        fi
-
-        for matcher in ${matchers}; do
-            if [ "${{ inputs.enable }}" = "true" ]; then
-                path="${GITHUB_ACTION_PATH}/matchers/${matcher}.json"
-                echo "Adding problem matcher ${path}"
-                echo "::add-matcher::${path}"
-            else
-                echo "Removing problem matcher ${matcher}"
-                echo "::remove-matcher owner=${matcher}::"
-            fi
-        done
+    - run: ${{ github.action_path }}/entrypoint.sh
       shell: bash
+      env:
+        PROBLEM_MATCHERS: "${{ inputs.problem_matchers }}"
+        ENABLE_PROBLEM_MATCHERS: "${{ inputs.enable }}"
