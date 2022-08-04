@@ -17,6 +17,7 @@ for common linters (see [list](#available-problem-matchers) below).
 * ansible-lint (requires `--parseable` flag or `parseable: true` in config)
 * black
 * black_severity
+* eslint
 * flake8
 * flake8_severity
 * isort
