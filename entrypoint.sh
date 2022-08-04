@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-if [ "${PROBLEM_MATCHERS}" = "*" ]; then
+if [ "${PROBLEM_MATCHERS}" = "all" ]; then
     matchers="$(find "${GITHUB_ACTION_PATH}/matchers/" -name "*.json" -exec basename {} .json \;)"
 else
     matchers="${PROBLEM_MATCHERS}"

@@ -8,7 +8,7 @@ for common linters (see [list](#available-problem-matchers) below).
 
 | Variable           | Default     | Description |
 | ------------------ | ----------- | ----------- |
-| `problem_matchers` | `"*"` (all) | Space-separated list of problem matchers to select (without .json file extension) |
+| `problem_matchers` | `"all"`     | Space-separated list of problem matchers to select (without .json file extension) |
 | `enable`           | `"true"`    | Whether to add or remove problem matchers |
 
 ### Available problem matchers

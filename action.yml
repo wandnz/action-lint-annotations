@@ -5,7 +5,7 @@ inputs:
   problem_matchers:
     description: Space-separated list of problem matchers to select (without .json file extension)
     required: false
-    default: "*"
+    default: "all"
   enable:
     description: Whether to add or remove problem matchers
     required: false
