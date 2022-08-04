@@ -9,7 +9,7 @@
                     "file": 1
                 },
                 {
-                    "regexp": "^  (\\d+):(\\d+)  (error|warning)?\\w*  (.*)$",
+                    "regexp": "^  (\\d+):(\\d+)  (?=[a-z]+)(error|warning)?[a-z]*  (.*)$",
                     "line": 1,
                     "column": 2,
                     "severity": 3,
