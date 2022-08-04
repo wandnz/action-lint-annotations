@@ -33,6 +33,7 @@ for common linters (see [list](#available-problem-matchers) below).
 * shellcheck (requires shellcheck >= 0.8.0)
 * vulture
 * vulture_severity
+* yamllint (requires `--format parsable`)
 
 ## Sample usage
 
