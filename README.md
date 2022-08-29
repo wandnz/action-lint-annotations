@@ -22,6 +22,7 @@ for common linters (see [list](#available-problem-matchers) below).
 * flake8_severity
 * isort
 * isort_severity
+* markdownlint
 * mypy
 * mypy_severity
 * pycodestyle
