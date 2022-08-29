@@ -1,10 +1,6 @@
 ---
 name: Lint checks
 
-permissions:
-  statuses: write
-  contents: read
-
 on:
   push:
     branches-ignore:
@@ -29,5 +25,5 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MULTI_STATUS: false
           VALIDATE_NATURAL_LANGUAGE: false
