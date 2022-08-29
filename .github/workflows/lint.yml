@@ -1,6 +1,10 @@
 ---
 name: Lint checks
 
+permissions:
+  statuses: write
+  contents: read
+
 on:
   push:
     branches-ignore:
