@@ -16,24 +16,17 @@ for common linters (see [list](#available-problem-matchers) below).
 * actionlint
 * ansible-lint (requires `--parseable` flag or `parseable: true` in config)
 * black
-* black_severity
 * eslint
 * flake8
-* flake8_severity
 * isort
-* isort_severity
 * markdownlint
 * mypy
-* mypy_severity
 * pycodestyle
-* pycodestyle_severity
 * pydocstyle
-* pydocstyle_severity
 * pylint-error
 * pylint-warning
 * shellcheck (requires shellcheck >= 0.8.0)
 * vulture
-* vulture_severity
 * yamllint (requires `--format parsable`)
 
 ## Sample usage
