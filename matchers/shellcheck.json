@@ -5,7 +5,7 @@
             "severity": "notice",
             "pattern": [
                 {
-                    "regexp": "^.*In ([^\\s]+) line (\\d+):.*$",
+                    "regexp": "^.*In (.+?) line (\\d+):.*$",
                     "file": 1,
                     "line": 2
                 },
@@ -13,7 +13,7 @@
                     "regexp": "^.+$"
                 },
                 {
-                    "regexp": "^.*(SC\\d+) \\((?=[a-z]+)(error|warning)?[a-z]*\\): ([^\\033]+).*$",
+                    "regexp": "^.*(SC\\d+) \\((?:(error|warning)|[a-z]+)\\): ([^\\033]+).*$",
                     "code": 1,
                     "severity": 2,
                     "message": 3,
