@@ -1,11 +1,11 @@
 {
     "problemMatcher": [
         {
-            "owner": "pycodestyle",
+            "owner": "pycodestyle-warning",
             "severity": "warning",
             "pattern": [
                 {
-                    "regexp": "^(\\S*):(\\d+):(\\d+): ([A-Z]\\d+) (.*)$",
+                    "regexp": "^(.+?):(\\d+):(\\d+): (W\\d+) (.+)$",
                     "file": 1,
                     "line": 2,
                     "column": 3,

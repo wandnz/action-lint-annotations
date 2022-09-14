@@ -1,11 +1,11 @@
 {
     "problemMatcher": [
         {
-            "owner": "flake8",
-            "severity": "warning",
+            "owner": "pycodestyle-error",
+            "severity": "error",
             "pattern": [
                 {
-                    "regexp": "(\\S+):(\\d+):(\\d+): ([A-Z]\\d+) (.*)",
+                    "regexp": "^(.+?):(\\d+):(\\d+): ([A-VX-Z]\\d+) (.+)$",
                     "file": 1,
                     "line": 2,
                     "column": 3,
