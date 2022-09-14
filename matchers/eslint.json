@@ -9,11 +9,12 @@
                     "file": 1
                 },
                 {
-                    "regexp": "^  (\\d+):(\\d+)  (?=[a-z]+)(error|warning)?[a-z]*  (.*)$",
+                    "regexp": "^ +(\\d+):(\\d+) +(?:(error|warning)|[a-z]+) +(.+?)(?: {2,}(\\S+))?$",
                     "line": 1,
                     "column": 2,
                     "severity": 3,
                     "message": 4,
+                    "code": 5,
                     "loop": true
                 }
             ]
