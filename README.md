@@ -20,8 +20,8 @@ for common linters (see [list](#available-problem-matchers) below).
 * isort
 * markdownlint
 * mypy
-* pycodestyle-error
-* pycodestyle-warning
+* pycodestyle-error (also works for linters that use the same output format, like flake8)
+* pycodestyle-warning (also works for linters that use the same output format, like flake8)
 * pydocstyle
 * pylint-error
 * pylint-warning
