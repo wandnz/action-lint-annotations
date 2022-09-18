@@ -5,12 +5,13 @@
             "severity": "notice",
             "pattern": [
                 {
-                    "regexp": "^([^:]+):(\\d+):(\\d+): \\[(?=[a-z]+)(error|warning)?[a-z]*\\] (.*)$",
+                    "regexp": "^(.+?):(\\d+):(\\d+): \\[(?:(error|warning)|[a-z]+)\\] (.+) \\((.+)\\)$",
                     "file": 1,
                     "line": 2,
                     "column": 3,
                     "severity": 4,
-                    "message": 5
+                    "message": 5,
+                    "code": 6
                 }
             ]
         }

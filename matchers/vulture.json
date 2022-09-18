@@ -2,9 +2,10 @@
     "problemMatcher": [
         {
             "owner": "vulture",
+            "severity": "error",
             "pattern": [
                 {
-                    "regexp": "^([^:]+):(\\d+): ([^(]+ \\(\\d+% confidence\\))$",
+                    "regexp": "^(.+?):(\\d+): (.+ \\(\\d+% confidence\\))$",
                     "file": 1,
                     "line": 2,
                     "message": 3

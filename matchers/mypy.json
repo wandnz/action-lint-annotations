@@ -2,13 +2,13 @@
     "problemMatcher": [
         {
             "owner": "mypy",
-            "code": "E",
+            "severity": "notice",
             "pattern": [
                 {
-                    "regexp": "^(\\S*):(\\d+):(\\d+): ([a-z]+): (.*)$",
+                    "regexp": "^(.+?):(\\d+):(?:(\\d+):)? (?:(error|warning)|[a-z]+): (.+)$",
                     "file": 1,
-                    "column": 3,
                     "line": 2,
+                    "column": 3,
                     "severity": 4,
                     "message": 5
                 }

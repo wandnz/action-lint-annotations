@@ -4,9 +4,9 @@
             "owner": "isort",
             "pattern": [
                 {
-                    "regexp": "^(\\S*): (\\S*) (.*)$",
-                    "file": 2,
+                    "regexp": "^([A-Z]+): (.+?) (.+)$",
                     "severity": 1,
+                    "file": 2,
                     "message": 3
                 }
             ]

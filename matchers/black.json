@@ -3,14 +3,11 @@
         {
             "owner": "black",
             "severity": "warning",
-            "column": 1,
-            "line": 1,
-            "code": "W",
             "pattern": [
                 {
-                    "regexp": "^(would reformat) (.*)$",
-                    "file": 2,
-                    "message": 1
+                    "regexp": "^(would reformat) (.+)$",
+                    "message": 1,
+                    "file": 2
                 }
             ]
         }

@@ -17,11 +17,11 @@ for common linters (see [list](#available-problem-matchers) below).
 * ansible-lint (requires `--parseable` flag or `parseable: true` in config)
 * black
 * eslint
-* flake8
 * isort
 * markdownlint
 * mypy
-* pycodestyle
+* pycodestyle-error (also works for linters that use the same output format, like flake8)
+* pycodestyle-warning (also works for linters that use the same output format, like flake8)
 * pydocstyle
 * pylint-error
 * pylint-warning
