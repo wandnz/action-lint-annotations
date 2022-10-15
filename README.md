@@ -53,7 +53,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Enable annotations
-        uses: wanduow/action-lint-annotations@v1
+        uses: wandnz/action-lint-annotations@v1
       - name: Lint code base
         uses: github/super-linter/slim@v4
         env:
@@ -66,7 +66,7 @@ If you want to select specific problem matchers:
 
 ```yaml
       - name: Enable annotations
-        uses: wanduow/action-lint-annotations@v1
+        uses: wandnz/action-lint-annotations@v1
         with:
           problem_matchers: >-
             pylint-error
@@ -77,7 +77,7 @@ If you want to disable problem matchers
 
 ```yaml
       - name: Disable annotations
-        uses: wanduow/action-lint-annotations@v1
+        uses: wandnz/action-lint-annotations@v1
         with:
           enable: "false"
 ```
